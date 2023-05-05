@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/SearchFragment"
+    android:id="@+id/base_navigation">
+
+    <fragment
+        android:id="@+id/SearchFragment"
+        tools:layout="@layout/fragment_items"
+        android:label="Character"
+        android:name="com.challenge.code_base_sdk.views.ItemsFragment">
+
+        <!--<argument
+            android:name="appType"
+            app:argType="String">
+        </argument>-->
+        <action
+            android:id="@+id/action_SearchFragment_to_DetailsFragment"
+            app:destination="@id/DetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailsFragment"
+        tools:layout="@layout/fragment_details"
+        android:label="Details"
+        android:name="com.challenge.code_base_sdk.views.DetailsFragment">
+        <!--<argument
+            android:name="itemId"
+            app:argType="String">
+        </argument>-->
+        <action
+            android:id="@+id/action_DetailsFragment_to_SearchFragment"
+            app:destination="@id/SearchFragment" />
+    </fragment>
+
+</navigation>
